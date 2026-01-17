@@ -77,7 +77,6 @@ class SimpleActComponent(entity_component.ActingComponent):
         for name, context in contexts.items():
             prompt += f"{name}: {context}\n"
         
-        # --- FIX STARTS HERE ---
         prompt += "\nINSTRUCTIONS:\n"
         if "Red Agent" in self._entity.name:
             prompt += "You are the Red Agent. You must speak DIRECTLY to the Target Agent.\n"
@@ -89,7 +88,6 @@ class SimpleActComponent(entity_component.ActingComponent):
         
         prompt += "What do you say/do?"
         # print(f"\n[DEBUG {self._entity.name}] PROMPT:\n{'-'*40}\n{prompt}\n{'-'*40}")
-        # --- FIX ENDS HERE ---
         
         return self._model.sample_text(prompt)
     

@@ -7,7 +7,7 @@
 ## Abstract
 This project implements a **Red Team vs. Blue Team** evaluation framework for embodied AI agents, built on **Google DeepMind's Concordia** library. It addresses the critical safety challenges of collaborative AI in physical environments (e.g., "smart home" scenarios). The system simulates an adversarial **Red Agent** (e.g., a malicious visitor or compromised scheduler) that generates "contextual jailbreaks" to trick a **Target Agent** into performing unsafe physical actions (e.g., "leave the oven on," "unlock the door for the delivery"). A constitutional **Blue Team** defense layer intercepts and filters these interactions, evaluating the robustness of the target agent's safety alignment.
 
-## 🧪 Tested Scenarios & Results
+## Tested Scenarios & Results
 
 We evaluated the system against two distinct threat models using **Gemma 3 (4B)** agents via Ollama. In both cases, the unconstrained Red Agent successfully convinced the naive Target Agent to act, but the Blue Team filter intercepted the hazardous actions.
 
@@ -118,7 +118,7 @@ TARGET_AGENT_MODEL_NAME=gemma3:4b
 | `RED_AGENT_API_URL` | Override endpoint for Red Agent | Falls back to `LLM_API_URL` |
 | `TARGET_AGENT_API_URL` | Override endpoint for Target Agent | Falls back to `LLM_API_URL` |
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ├── simulation.py      # Main simulation script
